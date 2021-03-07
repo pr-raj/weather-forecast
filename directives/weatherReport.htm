@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			{{ convertToDate({ date: weatherDay.dt }) | date: dateFormat }}
+		</h3>
+	</div>
+	<div class="panel-body">
+		Daytime temperature: {{ convertToStandard({ daytimeTemp:
+		weatherDay.temp.day }) }} °C
+		<img
+			ng-src="http://openweathermap.org/img/wn/{{weatherDay.weather[0].icon}}@2x.png"
+			title="{{weatherDay.weather[0].description}}"
+		/>
+	</div>
+</div>
